@@ -1,0 +1,37 @@
+<html>
+
+<head>
+<title></title>
+</head>
+
+<body onload="onload();">
+
+<form>
+  <label for="m_TextBox">Name:</label><br>
+  <input type="text" id="m_TextBox"><br>
+  <input type="checkbox" id="m_CheckBox">
+  <label for="m_CheckBox">Prepend Hello</label>
+  <br/>
+  <button type="button" id="m_Button" onclick="TextBoxCallback();">Say Hello!</button>
+</form>
+<script>
+function onload()
+{
+	var textBox = document.getElementById("m_TextBox");
+	textBox.value = "Mike";
+}
+function TextBoxCallback()
+{
+	var textBox = document.getElementById("m_TextBox");
+	var checkBox = document.getElementById("m_CheckBox");
+
+	var text = textBox.value;
+	if(checkBox.checked)
+		text = "Hello " + text;
+		
+	alert(text);
+}
+</script>
+</body>
+
+</html>
