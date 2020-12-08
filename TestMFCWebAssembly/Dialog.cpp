@@ -24,5 +24,7 @@ void Dialog::OnButtonClick()
 	if (m_CheckBox.GetCheck())
 		text = std::string("Hello ") + text;
 
+	WADebugPrint("Button clicked!");
+
 	WAMessageBox(text);
 }

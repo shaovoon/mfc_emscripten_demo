@@ -88,3 +88,8 @@ inline void WAMessageBox(const std::string& msg)
 {
 	MessageBoxA(AfxGetApp()->GetMainWnd()->GetSafeHwnd(), msg.c_str(), "Title", MB_OK);
 }
+
+inline void WADebugPrint(const std::string& msg)
+{
+	OutputDebugStringA(msg.c_str());
+}

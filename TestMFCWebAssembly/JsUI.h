@@ -95,3 +95,10 @@ inline void WAMessageBox(const std::string& msg)
 		alert(UTF8ToString($0));
 	}, msg.c_str());
 }
+
+inline void WADebugPrint(const std::string& msg)
+{
+	EM_ASM_({
+		console.log(UTF8ToString($0));
+	}, msg.c_str());
+}
